@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Log In to Chorenament</title>
+        <style>
+
+            body {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start; /*aligns content towards the top*/
+                align-items: center; /* centers content horizontally */
+                height: 100vh;
+                margin: 0;
+            }
+
+            h1 {
+                font-size: 35px;
+                font-family: 'American Typewriter', serif;
+                margin: 10px 0;
+            }
+
+            .logo {
+                width: 70px;
+                margin-bottom: 5px;
+            }
+
+            .content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 5vh; /* pushes content down one-third from the top of the page */
+            }
+
+
+            /*button styles*/
+            .btn {
+                padding: 10px 20px;
+                font-size: 18px;
+                font-family: sans-serif;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: 0.3s;
+                width: 350px; /*buttons are the same width*/
+                text-align: center;
+            }
+
+            /* Log In button */
+            .btn-letsgo {
+                background-color: #FCB544;
+                color: white;
+            }
+
+            .input-box {
+                width: 100%;
+                padding: 10px;
+                margin: 10px 0;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                font-size: 16px;
+            }
+
+        </style>   
+    </head>
+
+    <body>
+        
+        <div class="content">
+            <img src="logo.txt" alt = "Chorenament Logo" class="logo"> <!--Can't download other logos, using this one as placeholder-->
+            <h1>Create a Team</h1>
+
+            <input type="text" class="input-box" placeholder="An awesome team name!"></inputtype>
+
+            <button class="btn btn-letsgo">Next</button> <!--Should link to invite options page-->
+
+            <p style="margin-top: 15px; font-family: sans-serif; font-size: 14px;">
+                Have a team?
+                <a href="#" style="color: #FCB544; text-decoration: none;">Join them instead..</a> <!--'#' is just a placeholder for the page it will link to--> 
+            </p>
+
+        </div>
+        
+    </body>
+
+
+</html>
