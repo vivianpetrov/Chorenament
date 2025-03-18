@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition Page</title>
+    <style>
+        /* Define the custom font */
+        @font-face {
+            font-family: 'MyCustomFont';
+            src: url('fonts/MyFont.woff2') format('woff2'),
+                 url('fonts/MyFont.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; 
+            align-items: center; 
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4; 
+        }
+
+        h1 {
+            font-size: 50px;
+            font-family: 'MyCustomFont', serif; /* Use custom font */
+            margin: 10px 0;
+            color: #333; 
+        }
+
+        h2 {
+            font-size: 25px;
+            font-family: sans-serif;
+            margin: 5px 0;
+            color: #555; 
+        }
+
+        .logo {
+            width: 150px;
+            margin-bottom: 20px;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 5vh; 
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column; 
+            align-items: center; 
+            gap: 15px; 
+            margin-top: 20px; 
+        }
+
+        .transition-text {
+            font-family: 'MyCustomFont', serif; /* Use custom font */
+            text-align: center;
+            margin: 20px 0;
+            color: #333;
+        }
+
+        .transition-text .line {
+            display: block;
+            margin: 10px 0; 
+        }
+
+        .transition-text .line1 {
+            font-size: 30px;
+        }
+
+        .transition-text .line2 {
+            font-size: 40px; 
+        }
+
+        .transition-text .line3 {
+            font-size: 50px; 
+            font-weight: bold;
+            color: #FCB544;
+        }
+
+        .ready-text {
+            font-size: 25px;
+            font-family: 'MyCustomFont', serif; /* Use custom font */
+            margin-bottom: 30px; 
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="ready-text">Are you ready to...</div>
+        <img src="logo.txt" alt="Chorenament Logo" class="logo">
+        <div class="transition-text">
+            <span class="line line1">Clean,</span>
+            <span class="line line2">Compete,</span>
+            <span class="line line3">Conquer!</span>
+        </div>
+    </div>
+</body>
+</html>
