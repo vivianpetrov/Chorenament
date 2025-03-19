@@ -1,67 +1,66 @@
 <!doctype html>
-
 <head>
-    
-    <title>Chorenament | Mainpage  </title>
+    <title>Chorenament | Mainpage</title>
     <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 393px;
+            margin: 0 auto; 
+        }
+
         #task-list {
             list-style-type: none;
             padding: 0;
         }
 
-        /* Hide delete buttons by default */
         li button {
             display: none;
         }
 
-        /* Show delete button when hovering over the list item */
         li:hover button {
             display: inline-block;
         }
 
         button {
-            background: purple;
-    font-family: serif;
-    font-size: 16px;
-    border-radius: 8px;
-    color: aliceblue;
-    padding: 10px 20px; /* Adjust for proper sizing */
-    border: 1px solid #ccc;
+            background: #FCB544;
+            font-size: 14px; 
+            border-radius: 8px;
+            color: rgb(255, 252, 246);
+            padding: 8px 16px; 
+            border: 1px solid #ccc;
             display: inline-block;
-    justify-content: center;
-    cursor: pointer; /* Add a pointer cursor for better user experience */
-    align-items: center; /* Centers text inside the button */
-            
-}
+            justify-content: center;
+            cursor: pointer;
+            align-items: center;
+        }
 
         .taskk {
-            padding: 10px;
-            
-            font-size: 16px;
-            width: 250px;
+            padding: 8px;
+            font-size: 14px;
+            width: 200px; 
             border-radius: 5px;
             border: 1px solid floralwhite;
             background-color: ghostwhite;
             margin: auto;
-            margin-left: 320px;
-            margin-bottom: 20px;
-            justify-content: center;  
-           
+            margin-bottom: 10px; 
+            justify-content: center;
         }
 
         li {
             display: flex;
             align-items: center;
-            margin: 10px 0;
+            margin: 8px 0; 
         }
 
         input[type="checkbox"] {
-            width: 20px;
-            height: 20px;
+            width: 16px; 
+            height: 16px; 
             border: 2px solid #ddd;
             border-radius: 50%;
-            margin-right: 10px;
+            margin-right: 8px;
             cursor: pointer;
             background-color: #fff;
             position: relative;
@@ -71,16 +70,16 @@
         }
 
         input[type="checkbox"]:checked {
-            background-color: purple;
-            border-color: purple;
+            background-color: #FCB544;
+            border-color: #FCB544;
         }
 
         input[type="checkbox"]:checked::before {
             content: '✔';
             position: absolute;
-            left: 4px;
+            left: 3px; 
             top: -2px;
-            font-size: 16px;
+            font-size: 12px; 
             color: white;
             font-weight: bold;
         }
@@ -88,7 +87,7 @@
         li button {
             background: #e74c3c;
             font-family: sans-serif;
-            font-size: 9px;
+            font-size: 8px; 
             color: white;
             padding: 2px;
             border: none;
@@ -105,236 +104,305 @@
             text-decoration: line-through;
             color: #aaa;
         }
-.banner {
-    width: 100%;
-}
 
+        .banner {
+            width: 100%;
+        }
+
+        .streak-tracker {
+            text-align: center;
+            margin-top: 10px; 
+        }
+
+        .streak-tracker h2 {
+            font-size: 18px; 
+            margin-bottom: 8px; /* Smaller margin */
+        }
+
+        .streak-tracker p {
+            font-size: 32px; 
+            margin: 0;
+        }
+
+        .streak-tracker h3 {
+            font-size: 14px; 
+            text-align: center; 
+            margin-top: 8px; 
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 16px; 
+            background-image: url('header-bg.jpg'); /* IMPORT IMAGE HERE!!!!!!!!! */
+            background-size: cover; 
+            background-position: center; 
+            color: white;
+            width: 100%; 
+            box-sizing: border-box;
+        }
+
+        .profile {
+            display: flex;
+            flex-direction: column; 
+            align-items: center;
+        }
+
+        .profile img {
+            width: 32px;
+            height: 32px; 
+            border-radius: 50%;
+            margin-bottom: 4px; 
+        }
+
+        .profile p {
+            font-size: 14px; 
+            margin: 0;
+        }
+
+        .webpage {
+            width: 100%;
+            padding: 10px; 
+        }
+
+        .text {
+            width: 100%;
+            padding-top: 10px; 
+            padding-bottom: 10px; 
+            box-sizing: border-box;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            background-color: #FCB544;
+            padding: 8px 0; 
+            margin-bottom: 10px;
+            margin-top: 0;
+        }
+
+        .navbar li {
+            margin: 4px; 
+        }
+
+        .navbar .nav-btn {
+            color: white;
+            padding: 8px 16px; 
+            font-size: 14px; 
+            text-transform: uppercase;
+            border-radius: 5px;
+            transition: background-color 1s ease, color 1s ease;
+            text-decoration: none;
+        }
+
+        .navbar .nav-btn:hover {
+            background-color: #b3730b;
+            color: #e0a899;
+        }
+
+        #planet {
+            width: 100%;
+            background-color: ghostwhite;
+            padding: 10px; 
+            border-radius: 10px; 
+            margin-bottom: 10px; 
+        }
+
+        #space {
+            width: 100%;
+            height: 20px; 
+        }
+
+        #align {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px; 
+        }
     </style>
 </head>
 
 <body>
+    <div class="header">
+        <h1 id="m-title">Chorenament</h1>
+        <div class="profile">
+            <img src="profile.png" alt="Profile Picture">
+            <p>Points: <span id="points">0</span></p>
+        </div>
+    </div>
 
-    <img class="banner" src="banner.png"/> 
     <div class="webpage">
         <div class="text">
-           
-              <!-- Navigation Bar -->
+            <!-- Navigation Bar -->
             <nav class="navbar">
                 <ul>
-                    <li><a href="#mercury" class="nav-btn">Pre-Launch🌎</a></li>
-                    <li><a href="#venus" class="nav-btn">The Mission🚀</a></li>
-                    <li><a href="#mars" class="nav-btn">Post-Mission🌟</a></li>
-                   
+                    <li><a href="#streak" class="nav-btn">Daily Streak</a></li>
+                    <li><a href="#quests" class="nav-btn">Quests</a></li>
+                    <li><a href="#champs" class="nav-btn">Champions</a></li>
                 </ul>
             </nav>  
 
-            <h1 id="m-title" >Space Cruise+</h1>
-
-           
-
-            <p class="mission">Our mission: Empowering astronauts with tailored agendas for every stage of space exploration. SpaceCruise+ is your perfect intergalactic travel companion. </p>
-
-            <!-- Predefined task sections for each planet -->
-           
-            
-            <div id="planet">  
-                
-                
-                <div id="mercury">
-                <h1>Pre-launch🌎</h1>
-                <ul id="task-list-mercury"></ul>
-                
-                <div id="align">
-                <input type="text" class= "taskk" id="task-input-mercury" placeholder="Enter a task">
-                <button onclick="addTask('mercury')">Add Task</button>
+            <div id="planet">     
+                <div id="streak">
+                    <div class="streak-tracker">
+                        <h2>Keep up your streak!</h2>
+                        <p>Current Streak: <span id="streak-count">0</span> days</p>
+                        <h3>Maintain your streak by completing a task.</h3>
+                    </div>
                 </div>
             </div>
-    
-           
-        </div>
-            
-            <div id= "space">
-                
-                </div>
 
-        
-        <div id="planet">
-        
-            <div id="venus">
-                <h1>The Mission🚀</h1>
-                <ul id="task-list-venus"></ul>
-                
-                 <div id="align">
-                <input type="text" class= "taskk" id="task-input-venus" placeholder="Enter a task">
-                <button  onclick="addTask('venus')">Add Task</button>
-                </div> 
+            <div id="space"></div>
+
+            <div id="planet">
+                <div id="quests">
+                    <h1>Your Quests</h1>
+                    <ul id="task-list-quests"></ul>
+                    <div id="align">
+                        <input type="text" class="taskk" id="task-input-quests" placeholder="Register a New Quest">
+                        <button onclick="addTask('quests')">Add Quest</button>
+                    </div> 
+                </div>
+            </div>
+
+            <div id="space"></div>
+
+            <div id="planet">
+                <div id="champs">
+                    <h1>The Choreboard</h1>
+                </div>
             </div>
         </div>
-
-      
-            <div id= "space">
-                
-                </div>
-        
-        <div id="planet">
-            <div id="mars">
-                <h1>Post-Mission🌟</h1>
-                <ul id="task-list-mars"></ul>
-                
-                 <div id="align">
-                <input type="text" class= "taskk" id="task-input-mars" placeholder="Enter a task">
-                <button onclick="addTask('mars')">Add Task</button>
-                </div>
-            </div>
-            
-    
-        </div>
-        
-                <div id= "space">
-                
-                </div>
-            
-        
-                        </div>
-        
-        
-            </div>
     </div>
 
-            <script>
-                // Predefined tasks for each planet
-                const predefinedTasks = {
-                    mercury: [
-                        "Finalize mission training, including spacewalk (EVA) and robotics simulations. ",
-                        "Pack personal belongings and ensure compliance with weight and size restrictions. ",
-                        "Review mission briefings, objectives, and spacecraft operational manuals.",
-                        "Conduct final equipment checks and ensure tools are properly secured. ",
-                        "Meet with the medical team for pre-flight health assessments and immunizations.",
-                    ],
-                    venus: [
-                        "Execute and monitor scheduled experiments, recording all observations meticulously.",
-                        "Perform regular maintenance and inspections of spacecraft systems." ,
-                        "Adhere to the exercise regimen to mitigate muscle and bone loss in microgravity.",
-                        "Communicate daily with mission control to provide updates and receive instructions.",
-                        "Document personal experiences and observations for post-mission reports and outreach.",
-                        
-                    ],
-                    mars: [
-                        "Undergo medical evaluations to assess physical and psychological health post-spaceflight.",
-                        "Debrief with mission control and research teams to review mission outcomes.",
-                        "Analyze and organize collected data for scientific publication or reporting.",
-                        "Participate in public outreach events, including interviews and educational presentations.",
-                        "Reflect on mission performance and provide feedback to improve future missions.",
+    <script>
+        // Streak Tracker
+        let lastVisitDate = localStorage.getItem('lastVisitDate');
+        let streakCount = parseInt(localStorage.getItem('streakCount')) || 0;
+        const currentDate = new Date().toDateString();
 
+        if (lastVisitDate !== currentDate) {
+            const lastVisit = new Date(lastVisitDate);
+            const current = new Date(currentDate);
+            const timeDiff = current - lastVisit;
+            const daysDiff = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
 
-],
-                    
-                };
-                
-                
+            if (daysDiff === 1) {
+                streakCount++;
+            } else if (daysDiff > 1) {
+                streakCount = 1; 
+            }
 
-                // Load predefined tasks on page load
-                document.addEventListener("DOMContentLoaded", function() {
-                    for (const planet in predefinedTasks) {
-                        predefinedTasks[planet].forEach(function(task) {
-                            createTaskElement(planet, task, false);
-                        });
-                    }
+            localStorage.setItem('streakCount', streakCount);
+            localStorage.setItem('lastVisitDate', currentDate);
+        }
 
-                    // Load tasks from localStorage
-                    for (const planet in predefinedTasks) {
-                        loadTasks(planet);
-                    }
+        document.getElementById('streak-count').textContent = streakCount;
+
+        // Points System
+        let points = parseInt(localStorage.getItem('points')) || 0;
+        document.getElementById('points').textContent = points;
+
+        const predefinedTasks = {
+            quests: [
+                "Clean dishes",
+            ],
+        };
+
+        document.addEventListener("DOMContentLoaded", function() {
+            for (const planet in predefinedTasks) {
+                predefinedTasks[planet].forEach(function(task) {
+                    createTaskElement(planet, task, false);
                 });
+            }
 
-                // Function to create a new task list item
-                function createTaskElement(planet, taskText, checked) {
-                    var ul = document.getElementById(`task-list-${planet}`);
-                    var li = document.createElement("li");
+            for (const planet in predefinedTasks) {
+                loadTasks(planet);
+            }
+        });
 
-                    // Create a checkbox
-                    var checkbox = document.createElement("input");
-                    checkbox.type = "checkbox";
-                    checkbox.style.marginRight = "10px";
-                    checkbox.checked = checked;
+        function createTaskElement(planet, taskText, checked) {
+            var ul = document.getElementById(`task-list-${planet}`);
+            var li = document.createElement("li");
 
-                    // Add event listener to handle checkbox change
-                    checkbox.addEventListener('change', function() {
-                        updateTaskState(planet, taskText, checkbox.checked);
-                    });
+            var checkbox = document.createElement("input");
+            checkbox.type = "checkbox";
+            checkbox.style.marginRight = "10px";
+            checkbox.checked = checked;
 
-                    // Create a label for the task
-                    var label = document.createElement("label");
-                    label.textContent = taskText;
+            checkbox.addEventListener('change', function() {
+                updateTaskState(planet, taskText, checkbox.checked);
+            });
 
-                    // Create a delete button
-                    var deleteButton = document.createElement("button");
-                    deleteButton.textContent = "Delete";
-                    deleteButton.style.marginLeft = "10px";
-                    deleteButton.onclick = function () {
-                        li.remove();
-                        deleteTask(planet, taskText);
-                    };
+            var label = document.createElement("label");
+            label.textContent = taskText;
 
-                    // Append the checkbox, label, and delete button to the list item
-                    li.appendChild(checkbox);
-                    li.appendChild(label);
-                    li.appendChild(deleteButton);
-
-                    // Add the list item to the task list
-                    ul.appendChild(li);
+            var deleteButton = document.createElement("button");
+            deleteButton.textContent = "Delete";
+            deleteButton.style.marginLeft = "10px";
+            deleteButton.onclick = function () {
+                if (checkbox.checked) {
+                    points++;
+                    localStorage.setItem('points', points);
+                    document.getElementById('points').textContent = points;
                 }
+                li.remove();
+                deleteTask(planet, taskText);
+            };
 
-                // Function to add a task manually
-                function addTask(planet) {
-                    var input = document.getElementById(`task-input-${planet}`);
-                    var taskText = input.value.trim();
+            li.appendChild(checkbox);
+            li.appendChild(label);
+            li.appendChild(deleteButton);
 
-                    if (taskText === "") {
-                        alert("Please enter a task!");
-                        return;
-                    }
+            ul.appendChild(li);
+        }
 
-                    createTaskElement(planet, taskText, false);
-                    saveTask(planet, taskText, false);
-                    input.value = "";
+        function addTask(planet) {
+            var input = document.getElementById(`task-input-${planet}`);
+            var taskText = input.value.trim();
+
+            if (taskText === "") {
+                alert("Please enter a task!");
+                return;
+            }
+
+            createTaskElement(planet, taskText, false);
+            saveTask(planet, taskText, false);
+            input.value = "";
+        }
+
+        function saveTask(planet, taskText, checked) {
+            var tasks = JSON.parse(localStorage.getItem(`tasks-${planet}`)) || [];
+            tasks.push({ text: taskText, checked: checked });
+            localStorage.setItem(`tasks-${planet}`, JSON.stringify(tasks));
+        }
+
+        function loadTasks(planet) {
+            var tasks = JSON.parse(localStorage.getItem(`tasks-${planet}`)) || [];
+            tasks.forEach(function(task) {
+                createTaskElement(planet, task.text, task.checked);
+            });
+        }
+
+        function updateTaskState(planet, taskText, checked) {
+            var tasks = JSON.parse(localStorage.getItem(`tasks-${planet}`)) || [];
+            tasks.forEach(function(task) {
+                if (task.text === taskText) {
+                    task.checked = checked;
                 }
+            });
+            localStorage.setItem(`tasks-${planet}`, JSON.stringify(tasks));
+        }
 
-                // Function to save a task to localStorage
-                function saveTask(planet, taskText, checked) {
-                    var tasks = JSON.parse(localStorage.getItem(`tasks-${planet}`)) || [];
-                    tasks.push({ text: taskText, checked: checked });
-                    localStorage.setItem(`tasks-${planet}`, JSON.stringify(tasks));
-                }
-
-                // Function to load tasks from localStorage
-                function loadTasks(planet) {
-                    var tasks = JSON.parse(localStorage.getItem(`tasks-${planet}`)) || [];
-                    tasks.forEach(function(task) {
-                        createTaskElement(planet, task.text, task.checked);
-                    });
-                }
-
-                // Function to update task state (checkbox checked/unchecked)
-                function updateTaskState(planet, taskText, checked) {
-                    var tasks = JSON.parse(localStorage.getItem(`tasks-${planet}`)) || [];
-                    tasks.forEach(function(task) {
-                        if (task.text === taskText) {
-                            task.checked = checked;
-                        }
-                    });
-                    localStorage.setItem(`tasks-${planet}`, JSON.stringify(tasks));
-                }
-
-                // Function to delete a task from localStorage
-                function deleteTask(planet, taskText) {
-                    var tasks = JSON.parse(localStorage.getItem(`tasks-${planet}`)) || [];
-                    tasks = tasks.filter(function(task) {
-                        return task.text !== taskText;
-                    });
-                    localStorage.setItem(`tasks-${planet}`, JSON.stringify(tasks));
-                }
-            </script>
-    
+        function deleteTask(planet, taskText) {
+            var tasks = JSON.parse(localStorage.getItem(`tasks-${planet}`)) || [];
+            tasks = tasks.filter(function(task) {
+                return task.text !== taskText;
+            });
+            localStorage.setItem(`tasks-${planet}`, JSON.stringify(tasks));
+        }
+    </script>
 </body>
 </html>

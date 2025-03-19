@@ -6,21 +6,21 @@ body {
 
 h1 {
     text-align: center;
-    font-size: 50px;
-    color: #FCB544; 
+    font-size: 32px;
+    color: #000000; 
     font-weight: bold;
 }
 
 .webpage {
     width: 1200px;
     margin: auto;
-    background-color: #FFF8E7; /* Pastel yellow background */
+    background-color: #FFF8E7; 
     padding: 20px;
 }
 
 .mission {
     font-size: 20px;
-    color: #3A0071; /* Dark purple for text */
+    color: #FCB544; 
     padding: 10px;
     text-align: center;
 }
@@ -30,7 +30,7 @@ h1 {
     margin: auto;
     padding-top: 50px;
     padding-bottom: 50px;
-    color: #3A0071; /* Dark purple for text */
+    color: #000000; 
 }
 
 .label {
@@ -42,43 +42,44 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Navigation Bar */
+
 .navbar ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    background-color: #3A0071; /* Dark purple background */
+    background-color: #FCB544; 
     padding: 10px 0;
     margin-bottom: 20px;
+    width: 412px;
 }
 
 .navbar li {
-    margin: 5px; /* Space between the buttons */
+    margin: 5px; 
 }
 
 .navbar .nav-btn {
-    color: #ffffff; /* White text */
+    color: #ffffff; 
     padding: 10px 20px;
     font-size: 18px;
     text-transform: uppercase;
-    border-radius: 5px;
+    border-radius: 15px;
     transition: background-color 1s ease, color 1s ease;
     text-decoration: none;
 }
 
 .navbar .nav-btn:hover {
-    background-color: #6A4C93; /* Lighter purple for hover */
-    color: #ffffff; /* White text on hover */
+    background-color: #b3730b; 
+    color: #ffffff; 
 }
 
-/* Boxes */
+
 #planet {
     width: 1000px;
     margin: auto;
-    background-color: #ffffff; /* White background for content boxes */
+    background-color: #ffffff; 
     padding: 20px;
     border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 #space {
@@ -98,9 +99,8 @@ html {
     align-items: center;
 }
 
-/* Additional Styles for Buttons and Inputs */
 button {
-    background-color: #6A4C93; /* Lighter purple for buttons */
+    background-color: #FCB544; 
     color: #ffffff; /* White text */
     padding: 10px 20px;
     border: none;
@@ -111,7 +111,7 @@ button {
 }
 
 button:hover {
-    background-color: #3A0071; /* Dark purple for hover */
+    background-color: #b3730b; 
 }
 
 input[type="text"] {
@@ -121,6 +121,21 @@ input[type="text"] {
     border-radius: 5px;
     width: 250px;
     margin-right: 10px;
+}
+
+.streak-tracker {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.streak-tracker h2 {
+    font-size: 24px;
+    color: #b3730b;
+}
+
+.streak-tracker p {
+    font-size: 18px;
+    color: #FCB544;
 }
 
 /* Font Face */
