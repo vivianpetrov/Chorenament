@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Welcome to Chorenament!</title>
+        <style>
+            @font-face {
+                font-family: 'Albert Sans Bold';
+                src: url(AlbertSans-Bold.ttf) format('truetype');
+            }
+
+            body {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start; 
+                align-items: center; 
+                height: 100vh;
+                margin: 0;
+                background-color: #f7f7f7; 
+            }
+
+            h1 {
+                font-size: 35px;
+                font-family: 'Albert Sans Bold';
+                margin: 10px 0;
+                color: #333; 
+            }
+
+            .logo {
+                width: 70px;
+                margin-bottom: 20px; 
+            }
+
+            .content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 15vh; 
+                background-color: #fff; 
+                padding: 30px;
+                border-radius: 15px; 
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+            }
+
+            .input-box {
+                width: 100%;
+                padding: 12px;
+                margin: 10px 0;
+                border: 1px solid #ccc;
+                border-radius: 8px; 
+                font-size: 16px;
+                outline: none; 
+                transition: border-color 0.3s ease; 
+            }
+
+            .input-box:focus {
+                border-color: #FCB544; 
+            }
+
+            .btn {
+                padding: 12px 20px;
+                font-size: 18px;
+                font-family: sans-serif;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                transition: 0.3s;
+                width: 350px;
+                text-align: center;
+                margin-top: 10px; 
+            }
+
+            /* Let's go button */
+            .btn-signup {
+                background-color: #FEEDD0;
+                color: #FCB544;
+                font-weight: bold;
+            }
+
+            .btn-signup:hover {
+                background-color: #FCB544;
+                color: #fff;
+            }
+
+        </style>   
+    </head>
+
+    <body>
+        <div class="content">
+            <img src="logo.txt" alt="Chorenament Logo" class="logo">
+            <h1>Sign Up</h1>
+
+            <input type="text" class="input-box" placeholder="Enter your name.">
+
+            <button class="btn btn-signup">Continue</button>
+        </div>
+
+        <script>
+            function redirect() {
+                window.location.href = "JoinTeam.html"; 
+            }
+        </script>
+
+    </body>
+</html>

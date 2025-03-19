@@ -1,0 +1,130 @@
+body {
+    background-color: #FFF8E7; 
+    margin: 0;
+    font-family: "Albert Sans Bold", sans-serif;
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+    color: #FCB544; 
+    font-weight: bold;
+}
+
+.webpage {
+    width: 1200px;
+    margin: auto;
+    background-color: #FFF8E7; /* Pastel yellow background */
+    padding: 20px;
+}
+
+.mission {
+    font-size: 20px;
+    color: #3A0071; /* Dark purple for text */
+    padding: 10px;
+    text-align: center;
+}
+
+.text {
+    width: 1000px;
+    margin: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: #3A0071; /* Dark purple for text */
+}
+
+.label {
+    text-align: left;
+    margin: auto;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navigation Bar */
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-color: #3A0071; /* Dark purple background */
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+.navbar li {
+    margin: 5px; /* Space between the buttons */
+}
+
+.navbar .nav-btn {
+    color: #ffffff; /* White text */
+    padding: 10px 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    transition: background-color 1s ease, color 1s ease;
+    text-decoration: none;
+}
+
+.navbar .nav-btn:hover {
+    background-color: #6A4C93; /* Lighter purple for hover */
+    color: #ffffff; /* White text on hover */
+}
+
+/* Boxes */
+#planet {
+    width: 1000px;
+    margin: auto;
+    background-color: #ffffff; /* White background for content boxes */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+#space {
+    width: 200px;
+    height: 50px;
+}
+
+#align {
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.new {
+    justify-content: center;
+    align-items: center;
+}
+
+/* Additional Styles for Buttons and Inputs */
+button {
+    background-color: #6A4C93; /* Lighter purple for buttons */
+    color: #ffffff; /* White text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #3A0071; /* Dark purple for hover */
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 250px;
+    margin-right: 10px;
+}
+
+/* Font Face */
+@font-face {
+    font-family: "Albert Sans Bold";
+    src: url('AlbertSans-Bold.ttf') format('truetype');
+}
