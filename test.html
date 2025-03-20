@@ -9,6 +9,9 @@
             padding: 0;
             width: 393px;
             margin: 0 auto; 
+            font-family: "Albert Sans Bold", sans-serif;
+            background-color: #FFF8E7; 
+            box-sizing: border-box;
         }
 
         #task-list {
@@ -42,7 +45,6 @@
             font-size: 14px;
             width: 200px; 
             border-radius: 5px;
-            border: 1px solid floralwhite;
             border: 1px solid #ccc;
             background-color: ghostwhite;
             margin: auto;
@@ -58,7 +60,6 @@
             border: 1px solid #ececec; 
             border-radius: 5px;
             background-color: #ececec; 
-            width: 300px
         }
 
         input[type="checkbox"] {
@@ -111,10 +112,6 @@
             color: #aaa;
         }
 
-        .banner {
-            width: 100%;
-        }
-
         .streak-tracker {
             text-align: center;
             margin-top: 10px; 
@@ -122,7 +119,7 @@
 
         .streak-tracker h2 {
             font-size: 18px; 
-            margin-bottom: 8px; /* Smaller margin */
+            margin-bottom: 8px; 
         }
 
         .streak-tracker p {
@@ -141,7 +138,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 8px 16px; 
-
+            background-color: #f1ef5a; /* Solid color instead of image */
             color: white;
             width: 100%; 
             box-sizing: border-box;
@@ -167,43 +164,22 @@
 
         .webpage {
             width: 100%;
-            padding: 10px; 
+            height: 100vh; 
+            overflow-y: scroll; 
+            scroll-snap-type: y mandatory; 
         }
 
         .text {
             width: 100%;
-            padding-top: 10px; 
-            padding-bottom: 10px; 
+            height: 100vh; 
+            scroll-snap-align: start; 
+            padding: 10px; 
             box-sizing: border-box;
-        }
-
-        .navbar ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            background-color: #FCB544;
-            padding: 8px 0; 
-            margin-bottom: 10px;
-            margin-top: 0;
-        }
-
-        .navbar li {
-            margin: 4px; 
-        }
-
-        .navbar .nav-btn {
-            color: white;
-            padding: 8px 16px; 
-            font-size: 14px; 
-            text-transform: uppercase;
-            border-radius: 5px;
-            transition: background-color 1s ease, color 1s ease;
-            text-decoration: none;
-        }
-
-        .navbar .nav-btn:hover {
-            background-color: #b3730b;
-            color: #e0a899;
+            background-color: white; /* White background for each snapped page */
+            border-top: 10px solid #FFC0CB; /* Pink border on top */
+            border-bottom: 10px solid #FFC0CB; /* Pink border on bottom */
+            border-left: 10px solid #FCB544; /* Yellow border on the left */
+            border-right: 10px solid #FCB544; /* Yellow border on the right */
         }
 
         #planet {
@@ -212,6 +188,7 @@
             padding: 10px; 
             border-radius: 10px; 
             margin-bottom: 10px; 
+            box-sizing: border-box;
         }
 
         #space {
@@ -239,19 +216,18 @@
 
     <div class="webpage">
         <div class="text">
-
             <div id="planet">     
                 <div id="streak">
                     <div class="streak-tracker">
                         <h2>Keep up your streak!</h2>
                         <p>Current Streak: <span id="streak-count">0</span> days</p>
-                        <h3>Maintain your streak by logging in everyday!</h3>
+                        <h3>Maintain your streak by completing a task.</h3>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <div id="space"></div>
-
+        <div class="text">
             <div id="planet">
                 <div id="quests">
                     <h1>Your Quests</h1>
@@ -262,9 +238,9 @@
                     </div> 
                 </div>
             </div>
+        </div>
 
-            <div id="space"></div>
-
+        <div class="text">
             <div id="planet">
                 <div id="champs">
                     <h1>The Choreboard</h1>
