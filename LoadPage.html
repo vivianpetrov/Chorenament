@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loading Page</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      max-width: 390px;
+      margin: 0 auto;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .logo, .intro-text {
+      opacity: 0;
+      transform: scale(0.8);
+      animation: zoomIn 1s ease forwards;
+      animation-delay: 0.5s;
+    }
+
+    .intro-text {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .logo {
+      width: 100px;
+      height: auto;
+      margin-bottom: 25px;
+    }
+
+    .text-line {
+      opacity: 0;
+      transform: scale(0.8);
+      margin: 10px 0;
+      animation: zoomIn 0.8s ease forwards;
+    }
+
+    .text-line.clean {
+      font-size: 20px;
+      animation-delay: 2s;
+    }
+
+    .text-line.compete {
+      font-size: 26px;
+      font-weight: 600;
+      animation-delay: 3.2s;
+    }
+
+    .text-line.conquer {
+      font-size: 34px;
+      font-weight: bold;
+      color: #000000;
+      animation-delay: 4.4s;
+    }
+
+    @keyframes zoomIn {
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="intro-text">Are you ready to...</div>
+  <img src="logo.txt" alt="App Logo" class="logo">
+
+  <div class="text-line clean">Clean,</div>
+  <div class="text-line compete">Compete,</div>
+  <div class="text-line conquer">Conquer!</div>
+
+  <script>
+    // Redirect to HomePage.html after 6 seconds
+    setTimeout(function() {
+      window.location.href = "HomePage.html";
+    }, 6000); // 6000 milliseconds = 6 seconds
+  </script>
+  
+
+</body>
+</html>
