@@ -1,92 +1,98 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Welcome to Chorenament</title>
-        <style>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Welcome to Chorenament</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      max-width: 390px;
+      margin: 0 auto;
+      border: 1px solid #ccc;
+      height: 100vh;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-            body {
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-start; /*aligns content towards the top*/
-                align-items: center; /* centers content horizontally */
-                height: 100vh;
-                margin: 0;
-            }
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 10vh;
+      width: 90%;
+    }
 
-            h1 {
-                font-size: 50px;
-                font-family: 'American Typewriter', serif;
-                margin: 10px 0;
-            }
+    .logo {
+      width: 150px;
+      margin-bottom: 20px;
+    }
 
-            h2 {
-                font-size: 25px;
-                font-family: sans-serif;
-                margin: 5px 0;
-            }
+    h1 {
+      font-size: 38px;
+      font-family: 'American Typewriter', serif;
+      margin: 10px 0;
+      text-align: center;
+    }
 
-            .logo {
-                width: 150px;
-                margin-bottom: 20px;
-            }
+    h2 {
+      font-size: 20px;
+      font-family: sans-serif;
+      margin: 5px 0;
+      text-align: center;
+    }
 
-            .content {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                margin-top: 5vh; /* pushes content down one-third from the top of the page */
-            }
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+      margin-top: 25px;
+      width: 100%;
+    }
 
-            .button-container {
-                display: flex;
-                flex-direction: column; /*stacks buttons vertically*/
-                align-items: center; /*center buttons*/
-                gap: 15px; /*space between buttons*/
-                margin-top: 20px; /*space between headings and buttons*/
-            }
+    .btn {
+      padding: 10px 20px;
+      font-size: 16px;
+      font-family: sans-serif;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s ease;
+      width: 100%;
+      max-width: 320px;
+      text-align: center;
+    }
 
-            /*button styles*/
-            .btn {
-                padding: 10px 20px;
-                font-size: 18px;
-                font-family: sans-serif;
-                border: none;
-                border-radius: 5px;
-                cursor: pointer;
-                transition: 0.3s;
-                width: 350px; /*buttons are the same width*/
-                text-align: center;
-            }
+    .btn-signup {
+      background-color: #FCB544;
+      color: white;
+    }
 
-            /* Sign Up button */
-            .btn-signup {
-                background-color:#FCB544;
-                color: white;
-            }
+    .btn-login {
+      background-color: #FEEDD0;
+      color: black;
+    }
 
-            /* Log In button */
-            .btn-login {
-                background-color: #FEEDD0;
-                color: black;
-            }
+  </style>
+</head>
+<body>
 
-        </style>   
-    </head>
+  <div class="content">
+    <img src="logo.txt" alt="Chorenament Logo" class="logo">
+    <h1>Chorenament</h1>
+    <h2>Compete against housemates</h2>
 
-    <body>
-        
-        <div class="content">
-            <img src="logo.txt" alt = "Chorenament Logo" class="logo">
-            <h1>Chorenament</h1>
-            <h2>Compete against housemates</h2>  
+    <div class="button-container">
+      <a href="SignUp.html" class="btn btn-signup">Sign Up</a>
+      <a href="LogIn.html" class="btn btn-login">Log In</a>
+    </div>
+  </div>
 
-            <div class="button-container">
-                <button class="btn btn-signup">Sign Up</button>
-                <button class="btn btn-login">Log In</button>
-            </div>
-        </div>
-        
-    </body>
-
-
+</body>
 </html>
