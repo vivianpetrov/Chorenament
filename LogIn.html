@@ -1,87 +1,103 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Log In to Chorenament</title>
-        <style>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Log In to Chorenament</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      max-width: 390px;
+      margin: 0 auto;
+      border: 1px solid #ccc;
+      height: 100vh;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-            body {
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-start; /*aligns content towards the top*/
-                align-items: center; /* centers content horizontally */
-                height: 100vh;
-                margin: 0;
-            }
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 7vh;
+      width: 90%;
+    }
 
-            h1 {
-                font-size: 35px;
-                font-family: 'American Typewriter', serif;
-                margin: 10px 0;
-            }
+    .logo {
+      width: 80px;
+      margin-bottom: 10px;
+    }
 
-            .logo {
-                width: 70px;
-                margin-bottom: 5px;
-            }
+    h1 {
+      font-size: 35px;
+      font-family: 'American Typewriter', serif;
+      margin: 10px 0 25px 0;
+      text-align: center;
+    }
 
-            .content {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                margin-top: 5vh; /* pushes content down one-third from the top of the page */
-            }
+    .input-box {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
 
+    .btn {
+      padding: 12px 20px;
+      font-size: 16px;
+      font-family: sans-serif;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s ease;
+      width: 100%;
+      max-width: 320px;
+      text-align: center;
+      margin-top: 20px;
+    }
 
-            /*button styles*/
-            .btn {
-                padding: 10px 20px;
-                font-size: 18px;
-                font-family: sans-serif;
-                border: none;
-                border-radius: 5px;
-                cursor: pointer;
-                transition: 0.3s;
-                width: 350px; /*buttons are the same width*/
-                text-align: center;
-            }
+    .btn-login {
+      background-color: #FEEDD0;
+      color: #FCB544;
+    }
 
-            /* Log In button */
-            .btn-login {
-                background-color: #FEEDD0;
-                color: #FCB544;
-            }
+    .bottom-text {
+      margin-top: 18px;
+      font-family: sans-serif;
+      font-size: 14px;
+      text-align: center;
+    }
 
-            .input-box {
-                width: 100%;
-                padding: 10px;
-                margin: 10px 0;
-                border: 1px solid #ccc;
-                border-radius: 5px;
-                font-size: 16px;
-            }
+    .bottom-text a {
+      color: #FCB544;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
 
-        </style>   
-    </head>
+  <div class="content">
+    <img src="logo.txt" alt="Chorenament Logo" class="logo">
+    <h1>Log In</h1>
 
-    <body>
-        
-        <div class="content">
-            <img src="logo.txt" alt = "Chorenament Logo" class="logo">
-            <h1>Log In</h1>
+    <input type="text" id="email" class="input-box" placeholder="Email or Phone Number">
+    <input type="password" id="password" class="input-box" placeholder="Password">
 
-            <input type="text" class="input-box" placeholder="Email or Phone Number"></inputtype>
-            <input type="password" class="input-box" placeholder="Password">
+    <button id="login-btn" class="btn btn-login">Log In</button>
 
-            <button class="btn btn-login">Log In</button>
+    <p class="bottom-text">
+      Don't have an account?
+      <a href="JoinTeam.html">Create one here.</a>
+    </p>
+  </div>
 
-            <p style="margin-top: 15px; font-family: sans-serif; font-size: 14px;">
-                Don't have an account?
-                <a href="#" style="color: #FCB544; text-decoration: none;">Create one here.</a> <!--'#' is just a placeholder for the page it will link to--> 
-            </p>
-
-        </div>
-        
-    </body>
-
-
+</body>
 </html>
