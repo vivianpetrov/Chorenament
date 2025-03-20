@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home Page</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      max-width: 390px;
+      margin: 0 auto;
+      border: 1px solid #ccc;
+    }
+
+    .header {
+      position: relative;
+      width: 100%;
+      height: 180px;
+      overflow: hidden;
+    }
+
+    .header img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .header-text {
+      position: absolute;
+      top: 120px;
+      left: 15px;
+      font-size: 40px;
+      color: white;
+      font-weight: bold;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+    }
+
+    .navigation-header {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        margin: 10px auto;
+        width: 90%;
+    }
+
+    .nav-option {
+        background-color: #FEEDD0;
+        width: 100%;
+        padding: 8px 16px;
+        border-radius: 20px;
+        font-size: 18px;
+        font-weight: 600;
+        color: #333;
+        text-align: center;
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15);
+    }
+
+    .nav-option:hover {
+        background-color: #f3cb87;
+        color: #ad670b;
+    }
+
+
+    .profile {
+      display: flex;
+      align-items: center;
+      padding: 15px;
+      background-color: #f9f9f9;
+    }
+
+    .profile img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 15px;
+    }
+
+    .profile-details {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .player-name {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .player-info {
+      font-size: 14px;
+      color: #666;
+    }
+
+    .streak-message {
+      width: 100%;
+      background-color: #f9f9f9;
+      padding: 15px;
+      margin-top: -5px;
+      box-sizing: border-box;
+    }
+
+    .streak-title {
+      font-size: 22px;
+      font-weight: bold;
+      text-align: left;
+      margin-bottom: 5px;
+    }
+
+    .streak-subtext {
+      font-size: 14px;
+      color: #555;
+      text-align: left;
+    }
+
+    .quests-section {
+      background-color: #FEEDD0;
+      width: 90%;
+      max-width: 350px;
+      height: 250px;
+      padding: 20px;
+      box-sizing: border-box;
+      margin: 10px auto;
+      border-radius: 20px;
+      box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.15);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .quests-header {
+      text-align: left;
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .quest-list {
+      overflow-y: auto;
+      flex-grow: 1;
+      padding-right: 5px;
+    }
+
+    .quest-item {
+      background-color: #f6d8a8;
+      padding: 10px;
+      margin-bottom: 8px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 15px;
+      transition: all 0.3s ease;
+    }
+
+    .quest-item.completed {
+      text-decoration: line-through;
+      opacity: 0.6;
+    }
+
+    .quest-item:hover {
+      background-color: #f3cb87;
+    }
+
+    .champion-display {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 4px auto;
+        gap: 10px;
+        flex-wrap: nowrap;
+    }
+
+    .champion-name {
+        font-size: 28px;
+        font-weight: bold;
+        background-color: #f6d8a8; /* Match quest-item bg */
+        color: #333;
+        padding: 6px 14px;
+        border-radius: 12px;
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    .sparkle-icon {
+        width: 32px;
+        height: 32px;
+    }
+
+
+  </style>
+</head>
+<body>
+
+  <!-- Header GIF section -->
+  <div class="header">
+    <img src="homepic.gif" alt="Header GIF">
+    <div class="header-text">Home</div>
+  </div>
+
+  <!-- Navigation Header -->
+  <div class="navigation-header">
+    <div class="nav-option">Daily Streak</div>
+    <div class="nav-option">Champions</div>
+  </div>
+  
+
+  <!-- Profile Info -->
+  <div class="profile">
+    <img src="profile.jpg" alt="Profile Picture">
+    <div class="profile-details">
+      <div class="player-name">Bucket Head Billy</div>
+      <div class="player-info">Level 1 · 140 Points</div>
+    </div>
+  </div>
+
+  <!-- Streak Message Section -->
+  <div class="streak-message">
+    <div class="streak-title">Keep Up Your Two-Day Streak!</div>
+    <div class="streak-subtext">Maintain your streak by completing your tasks.</div>
+  </div>
+
+  <!-- Sticky Note Section -->
+  <div class="quests-section">
+    <div class="quests-header">Today's Quests</div>
+    <div class="quest-list" id="questList">
+      <div class="quest-item">Do the dishes</div>
+      <div class="quest-item">Take out the trash</div>
+      <div class="quest-item">Vacuum the living room</div>
+      <div class="quest-item">Clean the bathroom</div>
+    </div>
+
+    <!-- Add Chore Input -->
+    <form id="addChoreForm" style="margin-top: 10px; display: flex; gap: 8px;">
+        <input 
+            type="text" 
+            id="choreInput" 
+            placeholder="Add a new chore..." 
+            style="flex: 1; padding: 8px; border-radius: 10px; border: 1px solid #ccc; font-size: 14px;"
+        />
+        <button 
+            type="submit" 
+            style="padding: 8px 12px; border-radius: 10px; background-color: #f6d8a8; border: none; cursor: pointer; font-weight: bold;"
+        >
+            Add
+        </button>
+    </form>
+
+  </div>
+
+  <div class="streak-message">
+    <div class="streak-title">This Week's Chore Champion</div>
+  </div>
+
+  <div class="champion-display">
+    <img src="sparkle.webp" alt="Sparkles" class="sparkle-icon">
+    <div class="champion-name">Captain Clean</div>
+    <img src="sparkle.webp" alt="Sparkles" class="sparkle-icon">
+  </div>
+  
+
+  <script>
+    const questList = document.getElementById('questList');
+
+    questList.addEventListener('click', function(e) {
+      if (e.target.classList.contains('quest-item')) {
+        if (e.target.classList.contains('completed')) {
+          // Undo task
+          e.target.classList.remove('completed');
+          questList.insertBefore(e.target, questList.firstChild); //
+        } else {
+          // Mark as completed
+          e.target.classList.add('completed');
+          questList.appendChild(e.target); // move to bottom
+        }
+      }
+    });
+
+    // Add chore functionality
+    const addChoreForm = document.getElementById('addChoreForm');
+    const choreInput = document.getElementById('choreInput');
+
+    addChoreForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const choreText = choreInput.value.trim();
+        if (choreText !== '') {
+        const newItem = document.createElement('div');
+        newItem.classList.add('quest-item');
+        newItem.textContent = choreText;
+        questList.insertBefore(newItem, questList.firstChild); // add at top
+        choreInput.value = ''; // clear input
+        }
+    });
+
+  </script>
+
+</body>
+</html> 
