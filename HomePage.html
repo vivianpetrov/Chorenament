@@ -155,6 +155,25 @@
       cursor: pointer;
       font-size: 15px;
       transition: all 0.3s ease;
+      position: relative; /* Needed for delete button positioning */
+    }
+
+    .quest-item .delete-btn {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 16px;
+      color: rgb(63, 59, 59);
+      background: none;
+      border: none;
+      cursor: pointer;
+      display: none;
+      font-weight: bold;
+    }
+
+    .quest-item:hover .delete-btn {
+      display: block;
     }
 
     .quest-item.completed {
@@ -211,7 +230,7 @@
 
   <!-- Profile Info -->
   <div class="profile">
-    <img src="profile.jpg" alt="Profile Picture">
+    <img src="bucketheadbilly.png" alt="Profile Picture">
     <div class="profile-details">
       <div class="player-name">Bucket Head Billy</div>
       <div class="player-info">Level 1 · 140 Points</div>
@@ -265,38 +284,83 @@
 
   <script>
     const questList = document.getElementById('questList');
-
+    const playerInfo = document.querySelector('.player-info');
+  
+    let points = 140;
+    let level = Math.floor(points / 100) + 1;
+  
+    function updatePlayerInfo() {
+      level = Math.floor(points / 100) + 1;
+      playerInfo.textContent = `Level ${level} · ${points} Points`;
+    }
+  
+    function createQuestItem(text) {
+      const item = document.createElement('div');
+      item.classList.add('quest-item');
+      item.textContent = text;
+  
+      const deleteBtn = document.createElement('button');
+      deleteBtn.classList.add('delete-btn');
+      deleteBtn.innerHTML = '&times;'; // HTML entity for "×"
+  
+      // Stop propagation so clicking X doesn't trigger completion
+      deleteBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        item.remove();
+      });
+  
+      item.appendChild(deleteBtn);
+      return item;
+    }
+  
+    // Initial click to toggle completed and add points
     questList.addEventListener('click', function(e) {
-      if (e.target.classList.contains('quest-item')) {
-        if (e.target.classList.contains('completed')) {
-          // Undo task
-          e.target.classList.remove('completed');
-          questList.insertBefore(e.target, questList.firstChild); //
+      const item = e.target.closest('.quest-item');
+      if (item && !e.target.classList.contains('delete-btn')) {
+        if (item.classList.contains('completed')) {
+          item.classList.remove('completed');
+          questList.insertBefore(item, questList.firstChild);
+          points = Math.max(points - 10, 0); // Optional to keep
         } else {
-          // Mark as completed
-          e.target.classList.add('completed');
-          questList.appendChild(e.target); // move to bottom
+          item.classList.add('completed');
+          questList.appendChild(item);
+          points += 10;
         }
+        updatePlayerInfo();
       }
     });
-
-    // Add chore functionality
+  
+    // Handle adding new chore
     const addChoreForm = document.getElementById('addChoreForm');
     const choreInput = document.getElementById('choreInput');
-
+  
     addChoreForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        const choreText = choreInput.value.trim();
-        if (choreText !== '') {
-        const newItem = document.createElement('div');
-        newItem.classList.add('quest-item');
-        newItem.textContent = choreText;
-        questList.insertBefore(newItem, questList.firstChild); // add at top
-        choreInput.value = ''; // clear input
-        }
+      e.preventDefault();
+      const choreText = choreInput.value.trim();
+      if (choreText !== '') {
+        const newItem = createQuestItem(choreText);
+        questList.insertBefore(newItem, questList.firstChild);
+        choreInput.value = '';
+      }
     });
-
+  
+    // Initialize existing quest items with delete buttons
+    const initialItems = Array.from(document.querySelectorAll('.quest-item'));
+    initialItems.forEach(item => {
+      const deleteBtn = document.createElement('button');
+      deleteBtn.classList.add('delete-btn');
+      deleteBtn.innerHTML = '&times;';
+      deleteBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        item.remove();
+      });
+      item.appendChild(deleteBtn);
+    });
+  
+    updatePlayerInfo();
   </script>
+  
+  
 
 </body>
 </html> 
